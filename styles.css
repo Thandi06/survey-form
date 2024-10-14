@@ -1,0 +1,147 @@
+/* GLOBAL STYLES */
+body {
+    margin: 0;
+    padding: 0;
+    background-attachment: fixed;
+    background-image: url(https://images.stockcake.com/public/5/f/9/5f9c26d0-a09b-41a5-b6b4-67bbb9f825a2_large/coders-at-work-stockcake.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* Centers background on all screen sizes */
+    color: #f5f6f7;
+    font-family: Tahoma, sans-serif;
+    font-size: 18px;
+    box-sizing: border-box;
+    /* Consistent padding and border management */
+}
+
+/* TEXT ALIGNMENT */
+h1,
+p {
+    margin: 1em auto;
+    text-align: center;
+}
+
+/* CONTAINER */
+.container {
+    width: 90%;
+    /* Adjusts width dynamically */
+    max-width: 700px;
+    /* Prevents it from growing too large */
+    background-color: rgba(25, 25, 72, 0.9);
+    margin: 0 auto;
+    padding-top: 30px;
+    padding-bottom: 2em;
+    /* Ensure some bottom padding for spacing */
+    border-radius: 8px;
+    /* Adds slight rounding */
+}
+
+/* FORM */
+form {
+    width: 100%;
+    /* Ensures form uses available space */
+    max-width: 500px;
+    min-width: 300px;
+    margin: 0 auto;
+    /* Centers the form inside the container */
+    padding-bottom: 2em;
+}
+
+/* FIELDSETS */
+fieldset {
+    border: none;
+}
+
+fieldset:last-of-type {
+    border-bottom: none;
+}
+
+/* LABELS */
+label {
+    display: block;
+    margin: 0.5rem 0;
+}
+
+/* INPUTS AND TEXTAREAS */
+input,
+textarea,
+select {
+    margin: 10px 0 0 0;
+    width: 100%;
+    /* Full width within the form */
+    min-height: 2.5em;
+    padding-left: 10px;
+    font-size: 16px;
+    border-radius: 6px;
+}
+
+input,
+textarea {
+    background-color: white;
+    border: none;
+    color: grey;
+}
+
+/* INLINE ELEMENTS */
+.inline {
+    width: unset;
+    margin: 0 0.5em 0 0;
+    vertical-align: middle;
+    display: inline;
+}
+
+/* SUBMIT BUTTON */
+input[type="submit"] {
+    display: block;
+    width: 90%;
+    /* Takes most of the form's width */
+    margin: 1em auto;
+    height: 2em;
+    font-size: 1.1rem;
+    background-color: #fc6c6c;
+    color: #0a0a23;
+    border: 2px solid #0a0a23;
+    min-width: 300px;
+    /* Prevents shrinking on small screens */
+    box-shadow: 0 2px 10px rgba(212, 6, 119, 0.1);
+    transition: background 0.3s, color 0.3s, border 0.3s;
+}
+
+input[type="submit"]:hover {
+    background: #0a0a23;
+    color: #fc6c6c;
+    border: 2px solid #fc6c6c;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        /* Expands to fill more space on smaller screens */
+    }
+
+    input[type="submit"] {
+        width: 100%;
+        /* Button takes full width on small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 16px;
+        /* Slightly smaller text for mobile */
+    }
+
+    form {
+        padding: 0 1rem;
+        /* Adjusts padding for mobile */
+    }
+
+    input,
+    textarea,
+    select {
+        font-size: 15px;
+        /* Slightly smaller inputs for better fit */
+    }
+}
